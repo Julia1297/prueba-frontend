@@ -21,16 +21,15 @@ const DropdownPagination = () => {
     };
     const onChange = (newValue) => {
         setValue(newValue);
-        console.log(inputValue)
         if (newValue.value === 0) {
             setIsOpen(true);
-                    onInputChangeRaw(inputValue);
         }
     };
 
     const saveItem = () => {
-        console.log("Agregar elemento: " + inputValue);
+        console.log("Se deberia realizar la llamada a backend para almacenar el item");
         closeModal();
+        window.location.reload(false);
     };
     return (
         <div
@@ -67,7 +66,7 @@ const DropdownPagination = () => {
                 }}
                 >
                     <span>
-                        ¿Desea registrar la empresa: {inputValue}?
+                        ¿Desea registrar la empresa?
                     </span>
                     <br/>
                     <div>

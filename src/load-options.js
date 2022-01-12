@@ -40,15 +40,4 @@ const loadOptions = async (search, prevOptions) => {
   };
 };
 
-export const saveOption = async inputValue => {
-  
-  await sleep(1000);
-  const newOption = {
-    name: inputValue
-  };
-
-  options.push(newOption);
-  return newOption;
-};
-
 export default loadOptions;
